@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Oeb-mV-A5f">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Dashboard-->
+        <scene sceneID="77N-2i-bvs">
+            <objects>
+                <navigationController storyboardIdentifier="HomeNC" automaticallyAdjustsScrollViewInsets="NO" id="Kr6-I0-Z5T" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Dashboard" image="globe.asia.australia.fill" catalog="system" landscapeImage="globe.asia.australia.fill" largeContentSizeImage="globe.asia.australia.fill" selectedImage="globe.asia.australia.fill" id="e9F-2p-rVM"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DlG-gk-f7o">
+                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" name="mainColor"/>
+                        <color key="barTintColor" name="bgColor"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Q6H-Qc-m5t" kind="relationship" relationship="rootViewController" id="R6g-SX-Qrh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xhK-3f-tNg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1523" y="-213"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="2Ln-Ks-b06">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Q6H-Qc-m5t" customClass="HomeViewController" customModule="MovieApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nZv-GT-nTf">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ggs-ON-j6k">
+                                <rect key="frame" x="0.0" y="91" width="390" height="670"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexColor" systemColor="secondarySystemBackgroundColor"/>
+                                <color key="sectionIndexBackgroundColor" name="bgColor"/>
+                                <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Y59-Dp-wCv"/>
+                        <color key="backgroundColor" name="bgColor"/>
+                        <constraints>
+                            <constraint firstItem="Y59-Dp-wCv" firstAttribute="trailing" secondItem="Ggs-ON-j6k" secondAttribute="trailing" id="HKt-en-B2S"/>
+                            <constraint firstItem="Ggs-ON-j6k" firstAttribute="top" secondItem="Y59-Dp-wCv" secondAttribute="top" id="TjJ-t6-oXT"/>
+                            <constraint firstItem="Y59-Dp-wCv" firstAttribute="bottom" secondItem="Ggs-ON-j6k" secondAttribute="bottom" id="p0R-0x-PgT"/>
+                            <constraint firstItem="Ggs-ON-j6k" firstAttribute="leading" secondItem="Y59-Dp-wCv" secondAttribute="leading" id="uNA-z5-FxE"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="MG0-qX-grB"/>
+                    <connections>
+                        <outlet property="tableView" destination="Ggs-ON-j6k" id="AIT-Ne-Tsz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uxr-zT-p0l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2452" y="-213"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="R1Q-hn-nmH">
+            <objects>
+                <tabBarController storyboardIdentifier="TabBarVC" id="Oeb-mV-A5f" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="WPp-LL-hjP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" name="bgColor"/>
+                        <color key="tintColor" red="0.50196078430000002" green="0.47843137250000001" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="selectedImageTintColor" red="0.50196078430000002" green="0.47843137250000001" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Kr6-I0-Z5T" kind="relationship" relationship="viewControllers" id="jCd-EP-U9c"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G9K-bG-3en" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="631" y="-213"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="globe.asia.australia.fill" catalog="system" width="128" height="123"/>
+        <namedColor name="bgColor">
+            <color red="0.11400000005960464" green="0.11400000005960464" blue="0.11400000005960464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="mainColor">
+            <color red="0.50199997425079346" green="0.4779999852180481" blue="0.78799998760223389" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
